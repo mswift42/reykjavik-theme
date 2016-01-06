@@ -8,7 +8,7 @@ Screenshots:
 ------------
 
 Javascript and ruby:
-![Screenshot ](https://github.com/mswift42/themecreator/raw/master/tc1emacsreykjavik.png)
+![Screenshot ](https://github.com/mswift42/reykjavik-theme/raw/master/tc1emacsreykjavik.png)
 
 Clojurescript:
-![Screenshot ](https://github.com/mswift42/themecreator/raw/master/tc1reykjavikemacsclojure.png)
+![Screenshot ](https://github.com/mswift42/reykjavik-theme/raw/master/tc1reykjavikemacsclojure.png)
