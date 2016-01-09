@@ -1,4 +1,4 @@
-;;; reykjavik-theme.el --- Emacs theme with a dark background.
+;;; reykjavik-theme.el --- Theme with a dark background.
 
 ;; Copyright (C) 2016 , martin haesler
 
