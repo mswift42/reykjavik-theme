@@ -12,3 +12,29 @@ Javascript and ruby:
 
 Clojurescript:
 ![Screenshot ](https://github.com/mswift42/reykjavik-theme/raw/master/tc1reykjavikemacsclojure.png)
+
+* * *
+
+Available on Melpa.
+
+Installation Instructions
+-------------------------
+
+add the following lines to your init.el (only if you have not done so already):
+
+    (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                             ("melpa" . "http://melpa.org/packages/")))
+    (package-initialize)
+
+
+
+This will add the gnu and melpa repos to your emacs setup.
+
+To install the theme:
+
+**M-x package-install** reykjavik-theme
+
+
+To use the white-sand theme when starting emacs, add this to your init.el:
+
+    (load-theme 'reykjakik)
