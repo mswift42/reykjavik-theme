@@ -37,4 +37,4 @@ To install the theme:
 
 To use the white-sand theme when starting emacs, add this to your init.el:
 
-    (load-theme 'reykjakik)
+    (load-theme 'reykjavik)
