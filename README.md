@@ -35,6 +35,6 @@ To install the theme:
 **M-x package-install** reykjavik-theme
 
 
-To use the white-sand theme when starting emacs, add this to your init.el:
+To use the reykjavik theme when starting emacs, add this to your init.el:
 
     (load-theme 'reykjavik)
