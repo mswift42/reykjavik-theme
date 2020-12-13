@@ -69,8 +69,8 @@
    `(cursor ((,class (:background ,bg3))))
    `(show-paren-match-face ((,class (:background ,warning))))
    `(isearch ((,class (:bold t :foreground ,warning :background ,bg3))))
-   `(mode-line ((,class (:box (:line-width 1 :color nil) :bold t :foreground ,fg4 :background ,bg2))))
-   `(mode-line-inactive ((,class (:box (:line-width 1 :color nil :style pressed-button) :foreground ,var :background ,bg1 :weight normal))))
+   `(mode-line ((,class (:box (:line-width 2 :color nil) :bold t :foreground ,fg4 :background ,bg2))))
+   `(mode-line-inactive ((,class (:box (:line-width 2 :color nil :style pressed-button) :foreground ,var :background ,bg1 :weight normal))))
    `(mode-line-buffer-id ((,class (:bold t :foreground ,func :background nil))))
    `(mode-line-highlight ((,class (:foreground ,keyword :box nil :weight bold))))
    `(mode-line-emphasis ((,class (:foreground ,fg1))))
@@ -134,7 +134,7 @@
    `(js3-function-param-face ((,class (:foreground ,fg2))))
    `(js3-jsdoc-tag-face ((,class (:foreground ,keyword))))
    `(js3-instance-member-face ((,class (:foreground ,const))))
-   `(warning ((,class (:foreground ,warning)))) 
+   `(warning ((,class (:foreground ,warning))))
    `(ac-completion-face ((,class (:underline t :foreground ,keyword))))
    `(info-quoted-name ((,class (:foreground ,builtin))))
    `(info-string ((,class (:foreground ,str))))
@@ -237,7 +237,20 @@
    `(jde-java-font-lock-constant-face ((t (:foreground ,const))))
    `(jde-java-font-lock-modifier-face ((t (:foreground ,fg2))))
    `(jde-jave-font-lock-protected-face ((t (:foreground ,keyword))))
-   `(jde-java-font-lock-number-face ((t (:foreground ,var))))))
+   `(jde-java-font-lock-number-face ((t (:foreground ,var))))
+   ;;
+   ;; emacs >= 26.1
+   `(line-number ((t (:inherit fringe))))
+   `(line-number-current-line ((t (:inherit fringe :foreground "white" :weight bold))))
+   ;;
+   ;; emacs >= 27.1
+   `(tab-line ((,class (:inherit fringe :box (:line-width 4 :color ,bg2)))))
+   `(tab-line-tab ((,class (:inherit tab-line))))
+   `(tab-line-tab-inactive ((,class (:inherit tab-line :foreground ,comment))))
+   `(tab-line-tab-current  ((,class (:background ,bg4 :foreground ,fg1 :box (:line-width 4 :color ,bg4)))))
+   `(tab-line-highlight    ((,class (:background ,bg1 :foreground ,fg2 :box (:line-width 4 :color ,bg1)))))
+
+   ))
 
 ;;;###autoload
 (when load-file-name
