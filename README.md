@@ -38,3 +38,15 @@ To install the theme:
 To use the reykjavik theme when starting emacs, add this to your init.el:
 
     (load-theme 'reykjavik)
+
+## Features for emacs-27 and beyond
+
+1. `tab-line` is supported
+
+A nice way of using it is:
+
+```
+(require 'tab-line)
+
+(global-tab-line-mode (if (display-graphic-p) t -1))
+```
