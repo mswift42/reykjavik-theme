@@ -238,19 +238,23 @@
    `(jde-java-font-lock-modifier-face ((t (:foreground ,fg2))))
    `(jde-jave-font-lock-protected-face ((t (:foreground ,keyword))))
    `(jde-java-font-lock-number-face ((t (:foreground ,var))))
-   ;;
-   ;; emacs >= 26.1
-   `(line-number ((t (:inherit fringe))))
-   `(line-number-current-line ((t (:inherit fringe :foreground "white" :weight bold))))
-   ;;
-   ;; emacs >= 27.1
-   `(tab-line ((,class (:inherit fringe :box (:line-width 4 :color ,bg2)))))
-   `(tab-line-tab ((,class (:inherit tab-line))))
-   `(tab-line-tab-inactive ((,class (:inherit tab-line :foreground ,comment))))
-   `(tab-line-tab-current  ((,class (:background ,bg4 :foreground ,fg1 :box (:line-width 4 :color ,bg4)))))
-   `(tab-line-highlight    ((,class (:background ,bg1 :foreground ,fg2 :box (:line-width 4 :color ,bg1)))))
-
-   ))
+   )
+  ;; emacs >= 26.1
+  (when (>= emacs-major-version 26)
+    (custom-theme-set-faces
+     'reykjavik
+     `(line-number ((t (:inherit fringe))))
+     `(line-number-current-line ((t (:inherit fringe :foreground "white" :weight bold))))))
+  ;; emacs >= 27.1
+  (when (>= emacs-major-version 27)
+    (custom-theme-set-faces
+     'reykjavik
+     `(tab-line ((,class (:inherit fringe :box (:line-width 4 :color ,bg2)))))
+     `(tab-line-tab ((,class (:inherit tab-line))))
+     `(tab-line-tab-inactive ((,class (:inherit tab-line :foreground ,comment))))
+     `(tab-line-tab-current  ((,class (:background ,bg4 :foreground ,fg1 :box (:line-width 4 :color ,bg4)))))
+     `(tab-line-highlight    ((,class (:background ,bg1 :foreground ,fg2 :box (:line-width 4 :color ,bg1)))))))
+  )
 
 ;;;###autoload
 (when load-file-name
