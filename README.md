@@ -38,7 +38,15 @@ To install the theme:
 To use the reykjavik theme when starting emacs, add this to your init.el:
 
     (load-theme 'reykjavik)
+    
+## Features for emacs-26 and beyond
 
+Emacs26 introduces `line-number-mode` to show the line number.
+
+The quickest way of showing line numbers is
+```
+(global-display-line-numbers-mode 1)
+```
 ## Features for emacs-27 and beyond
 
 1. `tab-line` is supported
